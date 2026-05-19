@@ -277,7 +277,7 @@ def cumped(X, X_pre, w=0, E=None):
     return X_cumped
 
 
-def switchback_linearized_cumped_long(result, result_pre, metric, unit, days, effects, alphas=[0.01, 0.0125, 0.0167, 0.025, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5], alternative='greater', n_runs=10000, additional_covariats=[]):
+def switchback_cumped(result, result_pre, metric, unit, days, effects, alphas=[0.01, 0.0125, 0.0167, 0.025, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5], alternative='greater', n_runs=10000, additional_covariats=[]):
     start_date = pd.to_datetime(result['start_dt'].min())  # Начальная дата
     end_date =  pd.to_datetime(result['start_dt'].max())  # Конечная дата
     step = datetime.timedelta(days=2)  # Шаг в один день
